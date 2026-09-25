@@ -1,12 +1,13 @@
 {
-  "name": "project",
-  "version": "1.0.0",
+  "name": "opensign-proof",
+  "version": "0.1.0",
   "private": true,
   "type": "commonjs",
   "description": "Standalone proof harness: create -> send -> sign -> completed webhook against the OpenSign API",
   "scripts": {
-    "build": "node canary.js && tsc",
-    "prepare": "node canary.js"
+    "webhook": "node src/webhook-server.js",
+    "e2e": "node src/run-e2e.js",
+    "selftest": "node test/selftest.js"
   },
   "dependencies": {
     "express": "^4.21.2"
